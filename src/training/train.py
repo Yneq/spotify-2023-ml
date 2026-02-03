@@ -3,8 +3,10 @@ import argparse
 import yaml
 import numpy as np
 import pandas as pd
+
 import mlflow
 import mlflow.sklearn
+import mlflow.models.signature
 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
@@ -83,7 +85,21 @@ def train(config_path: Path):
         mlflow.log_metric("r2", r2)
 
         # Log model
-        mlflow.sklearn.log_model(model, "model")
+        input_example = X_train.iloc[:5]
+
+        signature = mlflow.models.signature.infer_signature(
+            X_train, model.predict(X_train)
+        )
+
+        mlflow.sklearn.log_model(
+            model,
+            artifact_path="model",
+            registered_model_name="spotify-streams-regressor",
+            input_example=input_example,
+            signature=signature,
+        )
+
+
 
         print("Training complete")
         print("RMSE:", rmse)

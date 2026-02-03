@@ -22,3 +22,9 @@ __pycache__/
 .vscode/
 .idea/
 .venv/
+
+# MLflow
+mlruns/
+
+# Data
+data/processed/

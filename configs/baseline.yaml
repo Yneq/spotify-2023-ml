@@ -6,6 +6,7 @@ data:
   processed_path: data/processed/spotify_clean.csv
   target: log_streams
   features:
+    # 音樂特徵
     - bpm
     - danceability_%
     - valence_%
@@ -14,6 +15,13 @@ data:
     - instrumentalness_%
     - liveness_%
     - speechiness_%
+    # ✅ 新增特徵
+    - artist_count
+    - released_year
+    - released_month
+    - released_day
+    - key
+    - mode
 
 training:
   test_size: 0.2
@@ -22,7 +30,9 @@ model:
   type: random_forest
   params:
     n_estimators: 300
-    max_depth: 10
+    max_depth: 3           # ← 從 10 改成 3
+    min_samples_split: 10  # ← 新增：每個節點至少 10 筆資料才分割
+    min_samples_leaf: 5    # ← 新增：每個葉節點至少 5 筆資料
     random_state: 42
     n_jobs: -1
 

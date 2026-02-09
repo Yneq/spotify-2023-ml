@@ -1,10 +1,10 @@
 project:
-  name: spotify-baseline
+  name: spotify-gb-classifier
   seed: 42
 
 data:
-  processed_path: data/processed/spotify_clean.csv
-  target: log_streams
+  processed_path: data/processed/spotify_classification.csv
+  target: is_popular
   features:
     - bpm
     - danceability_%
@@ -14,19 +14,17 @@ data:
     - instrumentalness_%
     - liveness_%
     - speechiness_%
-    - artist_count
 
 training:
   test_size: 0.2
 
 model:
-  type: random_forest
+  type: gradient_boosting
   params:
-    n_estimators: 100
-    max_depth: 6
-    min_samples_split: 10
+    n_estimators: 200
+    learning_rate: 0.1
+    max_depth: 5
     random_state: 42
-    n_jobs: -1
 
 mlflow:
-  experiment_name: spotify-baseline
+  experiment_name: spotify-classification

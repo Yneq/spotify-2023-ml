@@ -1,5 +1,5 @@
 project:
-  name: spotify-baseline
+  name: spotify-experiment-1
   seed: 42
 
 data:
@@ -14,7 +14,6 @@ data:
     - instrumentalness_%
     - liveness_%
     - speechiness_%
-    - artist_count
 
 training:
   test_size: 0.2
@@ -29,4 +28,4 @@ model:
     n_jobs: -1
 
 mlflow:
-  experiment_name: spotify-baseline
+  experiment_name: spotify-experiment-1

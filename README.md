@@ -312,7 +312,7 @@ This project showcases:
 
 ---
 
-## 中文結論 (Chinese Summary)
+## 結論 (Summary)
 
 ### 專案目標
 
@@ -404,15 +404,3 @@ This project showcases:
 ## 📜 License
 
 MIT License - Feel free to use this project for learning and portfolio purposes.
-
-🚀 執行指令
-bash# 1. 建立 README.md（複製上面的內容）
-# 用你喜歡的編輯器（VS Code、vim、nano）
-
-# 2. 加入並提交
-git add README.md
-git add .  # 加入其他所有檔案
-git commit -m "Update README with complete project documentation and Chinese summary"
-
-# 3. 推送到 GitHub
-git push origin main

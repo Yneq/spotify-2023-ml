@@ -4,6 +4,11 @@
 [![MLflow](https://img.shields.io/badge/MLflow-Tracking-orange.svg)](https://mlflow.org/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-green.svg)](https://scikit-learn.org/)
 
+**Live Demo**: [https://spotify-2023-ml-nng7gviqkcrg4n3zsv4enj.streamlit.app/](https://spotify-2023-ml-nng7gviqkcrg4n3zsv4enj.streamlit.app/)
+
+這個專案使用機器學習預測 Spotify 2023 熱門歌曲的流行度，完整實作了從資料處理到模型部署的 ML 流程，並使用 MLflow 進行實驗追蹤。最終發現：**音樂特徵與流行度的相關性極低**（< 0.1），真正影響播放次數的是外部因素（如歌手知名度、行銷、社群傳播）。
+
+
 This repository implements a **complete machine learning pipeline** for predicting Spotify song popularity using audio features. The project demonstrates:
 
 - 🔄 **Full ML lifecycle**: Data processing → Training → Evaluation → Deployment

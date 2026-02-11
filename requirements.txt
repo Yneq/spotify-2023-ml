@@ -32,7 +32,7 @@ ruff==0.6.9
 pre-commit==4.0.1
 
 # kaggle
-kaggle==1.6.17
+kaggle==1.8.4
 python-dotenv==1.0.1
 
 # 強制只用 binary wheel（避免 source build）

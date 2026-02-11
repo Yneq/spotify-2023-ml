@@ -1,8 +1,8 @@
 # core
 pandas==2.2.3
-numpy==1.26.4          # 鎖定穩定版
+numpy==2.1.1           # 支援 Python 3.13
 scikit-learn==1.5.2
-scipy==1.12.0          # 有官方 wheel，不會 source build
+scipy==1.12.0          # 有 wheel
 
 # models
 xgboost==2.1.1

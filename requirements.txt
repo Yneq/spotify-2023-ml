@@ -1,8 +1,8 @@
 # core
 pandas==2.2.3
-numpy
+numpy==1.26.4          # 鎖定穩定版
 scikit-learn==1.5.2
-scipy
+scipy==1.12.0          # 有官方 wheel，不會 source build
 
 # models
 xgboost==2.1.1
@@ -17,9 +17,9 @@ fastapi==0.115.5
 uvicorn[standard]==0.32.0
 streamlit==1.40.1
 
-# nlp / rag（後面章節用到）
-sentence-transformers==3.2.1
-faiss-cpu==1.8.0.post1
+# nlp / rag（後面章節用到）→ 先註解或降版 faiss
+# sentence-transformers==3.2.1
+# faiss-cpu==1.8.0      # 改成 1.8.0（有 wheel），或暫時註解
 
 # utilities
 tqdm==4.66.5
@@ -34,3 +34,6 @@ pre-commit==4.0.1
 # kaggle
 kaggle==1.6.17
 python-dotenv==1.0.1
+
+# 強制只用 binary wheel（避免 source build）
+--only-binary :all:

@@ -1,6 +1,5 @@
+# requirements-streamlit.txt
 streamlit
 pandas
 numpy
 plotly
-matplotlib
-seaborn

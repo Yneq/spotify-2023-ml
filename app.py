@@ -4,6 +4,14 @@ import numpy as np
 import plotly.express as px
 
 
+import sys
+import os
+
+st.write("Python version:", sys.version)
+st.write("Current working dir:", os.getcwd())
+st.write("Installed packages:")
+st.write(os.popen("pip list").read())
+
 # 設定頁面
 st.set_page_config(
     page_title="Spotify 2023 ML Prediction",
